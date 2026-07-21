@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏋️ Spor Salonu | Kas = Güç Değildir</title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'roboto-flex': ['"Roboto Flex"', 'sans-serif']
+          },
+          colors: {
+            gold: '#C5A059',
+            'bone-white': '#FAF9F6',
+            dark: { DEFAULT: '#0a0a0a', card: '#1a1a1a', cell: '#151515' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-roboto-flex bg-dark text-bone-white">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-dark/95 backdrop-blur-sm border-b border-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#hero" class="flex items-center gap-2 text-xl font-bold tracking-wider">
+          <span class="text-gold text-2xl">🏋️</span>
+          <span class="text-bone-white">SPOR</span>
+          <span class="text-gold">SALONU</span>
+        </a>
+
+        <!-- Desktop links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#membership" class="nav-link text-sm tracking-wider uppercase text-bone-white/80">Üyelik</a>
+          <a href="#trainers" class="nav-link text-sm tracking-wider uppercase text-bone-white/80">Eğitmenler</a>
+          <a href="#bmi" class="nav-link text-sm tracking-wider uppercase text-bone-white/80">BMI</a>
+          <a href="#schedule" class="nav-link text-sm tracking-wider uppercase text-bone-white/80">Ders Programı</a>
+        </div>
+
+        <!-- Hamburger -->
+        <button id="hamburger" class="md:hidden text-bone-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="mobile-menu-closed md:hidden">
+        <div class="flex flex-col gap-3 pb-4 pt-2">
+          <a href="#membership" class="text-sm tracking-wider uppercase text-bone-white/80 py-2 hover:text-gold transition">Üyelik</a>
+          <a href="#trainers" class="text-sm tracking-wider uppercase text-bone-white/80 py-2 hover:text-gold transition">Eğitmenler</a>
+          <a href="#bmi" class="text-sm tracking-wider uppercase text-bone-white/80 py-2 hover:text-gold transition">BMI</a>
+          <a href="#schedule" class="text-sm tracking-wider uppercase text-bone-white/80 py-2 hover:text-gold transition">Ders Programı</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(circle at 30% 50%, rgba(197,160,89,0.08) 0%, transparent 60%);"></div>
+    <div class="relative z-10 text-center px-4 max-w-4xl section-hidden">
+      <p class="text-gold tracking-[0.3em] uppercase text-sm sm:text-base mb-6 font-medium">🏋️ Premium Spor Salonu</p>
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
+        <span class="text-gold">Kas</span>
+        <span class="text-bone-white">=</span><br>
+        <span class="text-bone-white">Güç</span>
+        <span class="text-gold">Değildir</span>
+      </h1>
+      <p class="text-bone-white/60 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        Gerçek güç, disiplinde, kararlılıkta ve her gün bir öncekinden<br class="hidden sm:block">
+        daha iyi olma iradesinde saklıdır. Kendini keşfetmeye hazır mısın?
+      </p>
+      <a href="#membership" class="btn-gold inline-block px-10 py-4 rounded-lg text-base tracking-wider uppercase">
+        Hemen Başla
+      </a>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+      <svg class="w-6 h-6 text-gold/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== ÜYELİK PAKETLERİ ===== -->
+  <section id="membership" class="py-20 px-4 bg-dark">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 section-hidden">
+        <p class="text-gold tracking-[0.2em] uppercase text-sm font-medium mb-3">Üyelik</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-bone-white">Paketlerimiz</h2>
+        <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6">
+
+        <!-- 1 Aylık -->
+        <div class="membership-card bg-dark-card rounded-xl p-6 border border-white/10 section-hidden">
+          <p class="text-gold text-sm font-medium tracking-wider uppercase mb-2">Başlangıç</p>
+          <h3 class="text-xl font-bold text-bone-white mb-4">1 Aylık</h3>
+          <p class="text-3xl font-bold text-gold mb-6">₺899</p>
+          <ul class="space-y-3 mb-8 text-sm text-bone-white/70">
+            <li class="flex items-start gap-2">✅ Tüm ekipmanlara erişim</li>
+            <li class="flex items-start gap-2">✅ Soyunma & duş</li>
+            <li class="flex items-start gap-2">✅ 1× Danışmanlık seansı</li>
+            <li class="flex items-start gap-2 text-bone-white/30">❌ Grup dersleri</li>
+            <li class="flex items-start gap-2 text-bone-white/30">❌ Kişisel antrenör</li>
+          </ul>
+          <button class="w-full py-3 rounded-lg border border-gold text-gold font-medium text-sm tracking-wider hover:bg-gold hover:text-dark transition-all duration-300">
+            Seç
+          </button>
+        </div>
+
+        <!-- 3 Aylık -->
+        <div class="membership-card bg-dark-card rounded-xl p-6 border border-white/10 section-hidden">
+          <p class="text-bone-white/40 text-sm font-medium tracking-wider uppercase mb-2">Standart</p>
+          <h3 class="text-xl font-bold text-bone-white mb-4">3 Aylık</h3>
+          <p class="text-3xl font-bold text-gold mb-6">₺2.399</p>
+          <ul class="space-y-3 mb-8 text-sm text-bone-white/70">
+            <li class="flex items-start gap-2">✅ Tüm ekipmanlara erişim</li>
+            <li class="flex items-start gap-2">✅ Soyunma & duş</li>
+            <li class="flex items-start gap-2">✅ 2× Danışmanlık seansı</li>
+            <li class="flex items-start gap-2">✅ Grup dersleri (4 ders/ay)</li>
+            <li class="flex items-start gap-2 text-bone-white/30">❌ Kişisel antrenör</li>
+          </ul>
+          <button class="w-full py-3 rounded-lg border border-gold text-gold font-medium text-sm tracking-wider hover:bg-gold hover:text-dark transition-all duration-300">
+            Seç
+          </button>
+        </div>
+
+        <!-- 6 Aylık -->
+        <div class="membership-card bg-dark-card rounded-xl p-6 border border-white/10 section-hidden">
+          <p class="text-gold/70 text-sm font-medium tracking-wider uppercase mb-2">Premium</p>
+          <h3 class="text-xl font-bold text-bone-white mb-4">6 Aylık</h3>
+          <p class="text-3xl font-bold text-gold mb-6">₺4.499</p>
+          <ul class="space-y-3 mb-8 text-sm text-bone-white/70">
+            <li class="flex items-start gap-2">✅ Tüm ekipmanlara erişim</li>
+            <li class="flex items-start gap-2">✅ Soyunma & duş</li>
+            <li class="flex items-start gap-2">✅ 4× Danışmanlık seansı</li>
+            <li class="flex items-start gap-2">✅ Grup dersleri (sınırsız)</li>
+            <li class="flex items-start gap-2">✅ 1× Kişisel antrenör</li>
+          </ul>
+          <button class="w-full py-3 rounded-lg border border-gold text-gold font-medium text-sm tracking-wider hover:bg-gold hover:text-dark transition-all duration-300">
+            Seç
+          </button>
+        </div>
+
+        <!-- 9 Aylık -->
+        <div class="membership-card bg-dark-card rounded-xl p-6 border border-white/10 section-hidden">
+          <p class="text-gold text-sm font-medium tracking-wider uppercase mb-2">Elit</p>
+          <h3 class="text-xl font-bold text-bone-white mb-4">9 Aylık</h3>
+          <p class="text-3xl font-bold text-gold mb-6">₺6.299</p>
+          <ul class="space-y-3 mb-8 text-sm text-bone-white/70">
+            <li class="flex items-start gap-2">✅ Tüm ekipmanlara erişim</li>
+            <li class="flex items-start gap-2">✅ Soyunma & duş</li>
+            <li class="flex items-start gap-2">✅ 6× Danışmanlık seansı</li>
+            <li class="flex items-start gap-2">✅ Grup dersleri (sınırsız)</li>
+            <li class="flex items-start gap-2">✅ 2× Kişisel antrenör</li>
+          </ul>
+          <button class="w-full py-3 rounded-lg border border-gold text-gold font-medium text-sm tracking-wider hover:bg-gold hover:text-dark transition-all duration-300">
+            Seç
+          </button>
+        </div>
+
+        <!-- 1 Yıllık (En Popüler) -->
+        <div class="membership-card bg-dark-card rounded-xl p-6 border-2 border-gold/50 section-hidden relative overflow-hidden">
+          <div class="popular-badge bg-gold text-dark text-xs font-bold py-1 px-8">
+            En Popüler
+          </div>
+          <p class="text-gold text-sm font-medium tracking-wider uppercase mb-2">VIP</p>
+          <h3 class="text-xl font-bold text-bone-white mb-4">1 Yıllık</h3>
+          <p class="text-3xl font-bold text-gold mb-2">₺7.999</p>
+          <p class="text-xs text-bone-white/40 mb-6">₺667/ay</p>
+          <ul class="space-y-3 mb-8 text-sm text-bone-white/70">
+            <li class="flex items-start gap-2">✅ Tüm ekipmanlara erişim</li>
+            <li class="flex items-start gap-2">✅ Soyunma & duş (premium)</li>
+            <li class="flex items-start gap-2">✅ 12× Danışmanlık seansı</li>
+            <li class="flex items-start gap-2">✅ Grup dersleri (sınırsız)</li>
+            <li class="flex items-start gap-2">✅ 4× Kişisel antrenör</li>
+          </ul>
+          <button class="w-full py-3 rounded-lg gold-gradient text-dark font-bold text-sm tracking-wider hover:shadow-lg hover:shadow-gold/30 transition-all duration-300">
+            Seç
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EĞİTMENLER ===== -->
+  <section id="trainers" class="py-20 px-4" style="background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 section-hidden">
+        <p class="text-gold tracking-[0.2em] uppercase text-sm font-medium mb-3">Eğitmenler</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-bone-white">Profesyonel Ekibimiz</h2>
+        <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+
+        <div class="trainer-card bg-dark-card rounded-xl border border-white/5 p-4 sm:p-6 text-center section-hidden">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gold/30">
+            <img src="https://i.pravatar.cc/150?u=emre" alt="Emre Yılmaz" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-bone-white">Emre Yılmaz</h3>
+          <p class="text-gold text-sm font-medium mb-2">Head Coach</p>
+          <p class="text-bone-white/50 text-xs leading-relaxed">10+ yıl deneyim, fonksiyonel antrenman uzmanı</p>
+          <div class="flex justify-center gap-3 mt-4">
+            <a href="#" class="text-bone-white/30 hover:text-gold transition text-lg">📸</a>
+            <a href="#" class="text-bone-white/30 hover:text-gold transition text-lg">📧</a>
+          </div>
+        </div>
+
+        <div class="trainer-card bg-dark-card rounded-xl border border-white/5 p-4 sm:p-6 text-center section-hidden">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gold/30">
+            <img src="https://i.pravatar.cc/150?u=elif" alt="Elif Kaya" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-bone-white">Elif Kaya</h3>
+          <p class="text-gold text-sm font-medium mb-2">Pilates & Yoga</p>
+          <p class="text-bone-white/50 text-xs leading-relaxed">7 yıl deneyim, esneklik ve postür uzmanı</p>
+          <div class="flex justify-center gap-3 mt-4">
+            <a href="#" class="text-bone-white/30 hover:text-gold transition text-lg">📸</a>
+            <a href="#" class="text-bone-white/30 hover:text-gold transition text-lg">📧</a>
+          </div>
+        </div>
+
+        <div class="trainer-card bg-dark-card rounded-xl border border-white/5 p-4 sm:p-6 text-center section-hidden">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gold/30">
+            <img src="https://i.pravatar.cc/150?u=can" alt="Can Demir" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-bone-white">Can Demir</h3>
+          <p class="text-gold text-sm font-medium mb-2">Strength & Conditioning</p>
+          <p class="text-bone-white/50 text-xs leading-relaxed">8 yıl deneyim, powerlifting ve atletik performans</p>
+          <div class="flex justify-center gap-3 mt-4">
+            <a href="#" class="text-bone-white/30 hover:text-gold transition text-lg">📸</a>
+            <a href="#" class="text-bone-white/30 hover:text-gold transition text-lg">📧</a>
+          </div>
+        </div>
+
+        <div class="trainer-card bg-dark-card rounded-xl border border-white/5 p-4 sm:p-6 text-center section-hidden">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-gold/30">
+            <img src="https://i.pravatar.cc/150?u=zeynep" alt="Zeynep Aksoy" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-base sm:text-lg font-bold text-bone-white">Zeynep Aksoy</h3>
+          <p class="text-gold text-sm font-medium mb-2">Kardiyo & Zumba</p>
+          <p class="text-bone-white/50 text-xs leading-relaxed">5 yıl deneyim, grup dersleri ve motivasyon koçu</p>
+          <div class="flex justify-center gap-3 mt-4">
+            <a href="#" class="text-bone-white/30 hover:text-gold transition text-lg">📸</a>
+            <a href="#" class="text-bone-white/30 hover:text-gold transition text-lg">📧</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BMI HESAPLAMA ===== -->
+  <section id="bmi" class="py-20 px-4 bg-dark">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 section-hidden">
+        <p class="text-gold tracking-[0.2em] uppercase text-sm font-medium mb-3">Hesaplama</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-bone-white">BMI Hesapla</h2>
+        <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+      </div>
+
+      <div class="max-w-lg mx-auto section-hidden">
+        <div class="bg-dark-card rounded-2xl p-8 border border-white/10">
+          <div class="space-y-6">
+            <div>
+              <label class="block text-sm text-bone-white/60 mb-2 tracking-wider uppercase">Boy (cm)</label>
+              <input id="height" type="number" placeholder="Örn: 175" min="50" max="250"
+              class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-bone-white text-lg placeholder-bone-white/20">
+            </div>
+            <div>
+              <label class="block text-sm text-bone-white/60 mb-2 tracking-wider uppercase">Kilo (kg)</label>
+              <input id="weight" type="number" placeholder="Örn: 70" min="20" max="300"
+              class="w-full bg-dark border border-white/10 rounded-lg px-4 py-3 text-bone-white text-lg placeholder-bone-white/20">
+            </div>
+            <button id="bmiBtn" class="btn-gold w-full py-4 rounded-lg text-base tracking-wider uppercase font-bold">
+              Hesapla
+            </button>
+          </div>
+
+          <div id="bmiResult" class="mt-8 p-6 rounded-xl border border-white/5 hidden">
+            <div class="text-center">
+              <p class="text-sm text-bone-white/50 mb-1">BMI Değerin</p>
+              <p id="bmiValue" class="text-4xl font-bold text-gold"></p>
+              <div class="w-12 h-0.5 bg-gold/30 mx-auto my-4"></div>
+              <p id="bmiCategory" class="text-lg font-medium"></p>
+              <p id="bmiAdvice" class="text-sm text-bone-white/50 mt-2"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DERS PROGRAMI ===== -->
+  <section id="schedule" class="py-20 px-4" style="background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 section-hidden">
+        <p class="text-gold tracking-[0.2em] uppercase text-sm font-medium mb-3">Program</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-bone-white">Haftalık Ders Programı</h2>
+        <div class="w-16 h-0.5 bg-gold mx-auto mt-4"></div>
+      </div>
+
+      <div class="overflow-x-auto section-hidden">
+        <table class="schedule-table min-w-[700px]">
+          <thead>
+            <tr>
+              <th class="time-col w-20">Saat</th>
+              <th>Pazartesi</th>
+              <th>Salı</th>
+              <th>Çarşamba</th>
+              <th>Perşembe</th>
+              <th>Cuma</th>
+              <th>Cumartesi</th>
+              <th>Pazar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time-col">08:00</td>
+              <td><span class="class-name">Yoga</span><span class="trainer-name">Elif K.</span></td>
+              <td><span class="class-name">Cardio</span><span class="trainer-name">Zeynep A.</span></td>
+              <td><span class="class-name">Yoga</span><span class="trainer-name">Elif K.</span></td>
+              <td><span class="class-name">Cardio</span><span class="trainer-name">Zeynep A.</span></td>
+              <td><span class="class-name">Yoga</span><span class="trainer-name">Elif K.</span></td>
+              <td><span class="class-name">Açık Alan</span><span class="trainer-name">Serbest</span></td>
+              <td><span class="class-name">Açık Alan</span><span class="trainer-name">Serbest</span></td>
+            </tr>
+            <tr>
+              <td class="time-col">10:00</td>
+              <td><span class="class-name">Chest Day</span><span class="trainer-name">Can D.</span></td>
+              <td><span class="class-name">Back Day</span><span class="trainer-name">Emre Y.</span></td>
+              <td><span class="class-name">Shoulder</span><span class="trainer-name">Can D.</span></td>
+              <td><span class="class-name">Leg Day</span><span class="trainer-name">Emre Y.</span></td>
+              <td><span class="class-name">Chest Day</span><span class="trainer-name">Can D.</span></td>
+              <td><span class="class-name">Full Body</span><span class="trainer-name">Emre Y.</span></td>
+              <td><span class="class-name">Full Body</span><span class="trainer-name">Can D.</span></td>
+            </tr>
+            <tr>
+              <td class="time-col">12:00</td>
+              <td><span class="class-name">Pilates</span><span class="trainer-name">Elif K.</span></td>
+              <td><span class="class-name">Zumba</span><span class="trainer-name">Zeynep A.</span></td>
+              <td><span class="class-name">Pilates</span><span class="trainer-name">Elif K.</span></td>
+              <td><span class="class-name">Zumba</span><span class="trainer-name">Zeynep A.</span></td>
+              <td><span class="class-name">Pilates</span><span class="trainer-name">Elif K.</span></td>
+              <td><span class="class-name">Zumba</span><span class="trainer-name">Zeynep A.</span></td>
+              <td><span class="class-name">Kapalı</span><span class="trainer-name">-</span></td>
+            </tr>
+            <tr>
+              <td class="time-col">14:00</td>
+              <td><span class="class-name">Leg Day</span><span class="trainer-name">Emre Y.</span></td>
+              <td><span class="class-name">Chest Day</span><span class="trainer-name">Can D.</span></td>
+              <td><span class="class-name">Back Day</span><span class="trainer-name">Emre Y.</span></td>
+              <td><span class="class-name">Shoulder</span><span class="trainer-name">Can D.</span></td>
+              <td><span class="class-name">Leg Day</span><span class="trainer-name">Emre Y.</span></td>
+              <td><span class="class-name">HIIT</span><span class="trainer-name">Zeynep A.</span></td>
+              <td><span class="class-name">Kapalı</span><span class="trainer-name">-</span></td>
+            </tr>
+            <tr>
+              <td class="time-col">16:00</td>
+              <td><span class="class-name">Strength</span><span class="trainer-name">Can D.</span></td>
+              <td><span class="class-name">HIIT</span><span class="trainer-name">Zeynep A.</span></td>
+              <td><span class="class-name">Strength</span><span class="trainer-name">Can D.</span></td>
+              <td><span class="class-name">HIIT</span><span class="trainer-name">Zeynep A.</span></td>
+              <td><span class="class-name">Strength</span><span class="trainer-name">Can D.</span></td>
+              <td><span class="class-name">Back Day</span><span class="trainer-name">Emre Y.</span></td>
+              <td><span class="class-name">Kapalı</span><span class="trainer-name">-</span></td>
+            </tr>
+            <tr>
+              <td class="time-col">18:00</td>
+              <td><span class="class-name">Full Body</span><span class="trainer-name">Emre Y.</span></td>
+              <td><span class="class-name">Yoga</span><span class="trainer-name">Elif K.</span></td>
+              <td><span class="class-name">Full Body</span><span class="trainer-name">Emre Y.</span></td>
+              <td><span class="class-name">Yoga</span><span class="trainer-name">Elif K.</span></td>
+              <td><span class="class-name">Full Body</span><span class="trainer-name">Emre Y.</span></td>
+              <td><span class="class-name">Chest Day</span><span class="trainer-name">Can D.</span></td>
+              <td><span class="class-name">Kapalı</span><span class="trainer-name">-</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12 px-4 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="text-center md:text-left">
+          <a href="#hero" class="flex items-center gap-2 text-xl font-bold tracking-wider mb-2 justify-center md:justify-start">
+            <span class="text-gold text-2xl">🏋️</span>
+            <span class="text-bone-white">SPOR</span>
+            <span class="text-gold">SALONU</span>
+          </a>
+          <p class="text-bone-white/40 text-sm">Kas = Güç Değildir</p>
+        </div>
+        <div class="flex gap-6">
+          <a href="#" class="text-bone-white/30 hover:text-gold transition text-xl">📸</a>
+          <a href="#" class="text-bone-white/30 hover:text-gold transition text-xl">📱</a>
+          <a href="#" class="text-bone-white/30 hover:text-gold transition text-xl">📧</a>
+          <a href="#" class="text-bone-white/30 hover:text-gold transition text-xl">📍</a>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-white/5 text-center">
+        <p class="text-bone-white/30 text-xs">&copy; 2026 Spor Salonu. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

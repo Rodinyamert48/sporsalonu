@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto Flex', sans-serif;
+  background-color: #0a0a0a;
+  color: #FAF9F6;
+}
+
+.text-gold {
+  color: #C5A059;
+}
+
+.bg-gold {
+  background-color: #C5A059;
+}
+
+.border-gold {
+  border-color: #C5A059;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #C5A059 0%, #a8863e 100%);
+}
+
+/* Navbar */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #C5A059;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #C5A059;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hero overlay */
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 26, 26, 0.7) 100%);
+}
+
+/* Scroll indicator bounce */
+.scroll-indicator {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Section fade-in animation */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Membership cards */
+.membership-card {
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.membership-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #C5A059, #a8863e);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.membership-card:hover::before {
+  transform: scaleX(1);
+}
+
+.membership-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(197, 160, 89, 0.15);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 12px;
+  right: -30px;
+  transform: rotate(45deg);
+  padding: 4px 40px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Trainer cards */
+.trainer-card {
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.trainer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(197, 160, 89, 0.1);
+}
+
+.trainer-card:hover img {
+  transform: scale(1.05);
+}
+
+.trainer-card img {
+  transition: transform 0.5s ease;
+}
+
+/* BMI Result */
+.bmi-result-card {
+  transition: all 0.3s ease;
+}
+
+/* Schedule table */
+.schedule-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.schedule-table th {
+  background-color: #1a1a1a;
+  color: #C5A059;
+  font-weight: 600;
+  padding: 12px 8px;
+  text-align: center;
+  border: 1px solid #2a2a2a;
+  font-size: 0.85rem;
+}
+
+.schedule-table td {
+  padding: 10px 6px;
+  text-align: center;
+  border: 1px solid #2a2a2a;
+  font-size: 0.8rem;
+  background-color: #151515;
+  transition: background-color 0.3s ease;
+}
+
+.schedule-table td:hover {
+  background-color: #1f1f1f;
+}
+
+.schedule-table .time-col {
+  color: #C5A059;
+  font-weight: 600;
+  background-color: #1a1a1a;
+}
+
+.class-name {
+  color: #FAF9F6;
+  font-weight: 500;
+  display: block;
+}
+
+.trainer-name {
+  color: #666;
+  font-size: 0.7rem;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
+
+/* Input focus styles */
+input:focus {
+  outline: none;
+  border-color: #C5A059 !important;
+  box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.2);
+}
+
+/* Button hover */
+.btn-gold {
+  background: linear-gradient(135deg, #C5A059 0%, #a8863e 100%);
+  color: #0a0a0a;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(197, 160, 89, 0.3);
+}
+
+/* Mobile menu */
+.mobile-menu-open {
+  max-height: 300px;
+  opacity: 1;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.mobile-menu-closed {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+}
